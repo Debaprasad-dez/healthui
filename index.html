@@ -462,15 +462,7 @@
         color: #5F5FA5;
     }
     
-    #weekBtn1{
-        border: solid 2px #5A5A82;
-        background: #DCF9F6;
-        color: #5F5FA5;
-        font-weight: 500;
-        width: 92px;
-        border-radius: 24px;
-        margin-right: 6px;
-    }
+    
     
 </style>
 
@@ -486,130 +478,865 @@
                     
                     <div style="min-width: 200%;display: flex;flex-direction: row;padding-top: 0px;padding-bottom: 10px;">
                         <div style="float: left;">
-                            <button id="weekBtn1" class="" >Week 1</button>
+                            <button id="weekBtn" onclick="openweek1()" >Week 1</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 2</button>
+                            <button id="weekBtn" onclick="openweek2()">Week 2</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 3</button>
+                            <button id="weekBtn" onclick="openweek3()">Week 3</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 4</button>
+                            <button id="weekBtn" onclick="openweek4()">Week 4</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 5</button>
+                            <button id="weekBtn" onclick="openweek5()">Week 5</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 6</button>
+                            <button id="weekBtn" onclick="openweek6()">Week 6</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 7</button>
+                            <button id="weekBtn" onclick="openweek7()">Week 7</button>
                         </div>
                         <div style="float: left;">
-                            <button id="weekBtn" class="">Week 8</button>
+                            <button id="weekBtn" onclick="openweek8()">Week 8</button>
                         </div>
                     </div>
                 </div>
-                <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
-                    <div style="height: 64px;display: flex;flex-direction: row;">
-                        <div style="width: 65%;float: left;padding-left: 18px;">
-                            <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
-                        </div>
-                        <div style="width: 5%;float: left;">
+                <style>
+                    #week1data{
+                        display: block;
+                    }
+                    #week2data,#week3data,#week4data,#week5data,#week6data,#week7data,#week8data{
+                        display: none;
+                    }
+                </style>
+                <div id="weeksData">
 
+                    <div id="week1data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">70</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
-                            <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">70</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div style="width: 5%;float: left;">
-
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/salad.svg" style="height: 54px;" alt="">
+                    <div id="week2data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">67.5</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/star.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/time.svg" style="height: 54px;" alt="">
+                    <div id="week3data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">65</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/water.svg" style="height: 54px;" alt="">
+                    <div id="week4data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">62.5</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/star.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                    <div id="week5data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">60</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/star.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/chew.svg" style="height: 54px;" alt="">
+                    <div id="week6data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">57.5</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-                </div>
-                <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
-                    <div style="height: 54px;display: flex;">
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                    <div id="week7data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">55</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
                         </div>
-                        <div style="width: 50%;float: left;padding-top: 2px;">
-                            <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
-                        <div class="text-center" style="width: 25%;float: left;">
-                            <img src="assets/star.svg" style="height: 54px;" alt="">
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
+                    <div id="week8data">
+    
+                        <div class="mb-2" style="height: 90px;background: #4D5357;padding-top: 13px;border-radius: 12px;">
+                            <div style="height: 64px;display: flex;flex-direction: row;">
+                                <div style="width: 65%;float: left;padding-left: 18px;">
+                                    <p style="line-height: 64px;font-size:26px;font-weight: 600;color: white;">Weight <span style="font-size: 12px;font-style: italic;color: #AAAAAA;">in KGs</span></p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;background: white;border-radius: 12px;">
+                                    <p style="line-height: 64px;font-size: 30px;font-weight: 900;font-style: italic;">52.5</p>
+                                </div>
+                                <div style="width: 5%;float: left;">
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/salad.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Salad before every meal</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/time.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Meal time management</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/water.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Drink 12-15 glasses of water a day</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/sleep.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Sleep duration (7-8 hours)</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/chew.svg" style="height: 54px;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;line-height: 44px">Chewing food</p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/noStar.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="mb-2" style="height: 72px;background: #EDFAFF;border-radius: 12px;padding-top: 9px;">
+                            <div style="height: 54px;display: flex;">
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/walk.svg" style="width: 54px !important;" alt="">
+                                </div>
+                                <div style="width: 50%;float: left;padding-top: 2px;">
+                                    <p class=" text-dark m-0 p-0" style="height: 44px;font-weight: 600;width: 85%;">Go for a 30 minute walk </p>
+                                </div>
+                                <div class="text-center" style="width: 25%;float: left;">
+                                    <img src="assets/star.svg" style="height: 54px;" alt="">
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -885,6 +1612,97 @@
             bedtimePlan.style.display="block";
         }
         
+    }
+</script>
+<script>
+    var week1data=document.getElementById("week1data");
+    var week2data=document.getElementById("week2data");
+    var week3data=document.getElementById("week3data");
+    var week4data=document.getElementById("week4data");
+    var week5data=document.getElementById("week5data");
+    var week6data=document.getElementById("week6data");
+    var week7data=document.getElementById("week7data");
+    var week8data=document.getElementById("week8data");
+
+    function openweek1(){
+        week1data.style.display="block"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek2(){
+        week1data.style.display="none"
+        week2data.style.display="block"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek3(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="block"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek4(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="block"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek5(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="block"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek6(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="block"
+        week7data.style.display="none"
+        week8data.style.display="none"
+    }
+    function openweek7(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="block"
+        week8data.style.display="none"
+    }
+    function openweek8(){
+        week1data.style.display="none"
+        week2data.style.display="none"
+        week3data.style.display="none"
+        week4data.style.display="none"
+        week5data.style.display="none"
+        week6data.style.display="none"
+        week7data.style.display="none"
+        week8data.style.display="block"
     }
 </script>
 </html>
