@@ -15,6 +15,30 @@
     body{
     font-family: 'Red Hat Display', sans-serif;
 }
+#menucap1{
+    display: inline;
+}
+#menucap2{
+    display: none;
+}
+#menucap3{
+    display: none;
+}
+#menucap4{
+    display: none;
+}
+#slide1{
+    display: block;
+}
+#slide2{
+    display: none;
+}
+#slide3{
+    display: none;
+}
+#slide4{
+    display: none;
+}
 </style>
 <body>
     <div class="fixed-top">
@@ -146,7 +170,7 @@
                     
                 </div>
                 <div class=" px-2" style="border-radius: 6px;background: #4e4e4e;">
-                    <p class="pb-1 text-white" ><small><small>Try to focus on the red boxes for the first week.</small></small></p>
+                    <p class="pb-1 text-white" ><small><small><small>Try to focus on the red boxes for the first week.</small></small></small></p>
                 </div>
             </div>
             <div class="my-3 px-2">
@@ -185,6 +209,20 @@
         
     </div>
 
+    <div id="slide2" class="pt-3">
+        <h2>This is slide 2</h2>
+    </div>
+
+
+    <div id="slide3" class="pt-3">
+        <h2>This is slide 3</h2>
+    </div>
+
+
+    <div id="slide4" class="pt-3">
+        <h2>This is slide 4</h2>
+    </div>
+
 
 
 
@@ -196,7 +234,22 @@
             <div class="row">
                 <div class="col-3 m-0">
                     <div class="w-100 m-0 p-0" style="height: 17px;">
-                        <img class="w-100 m-0 p-0" src="assets/menuCap.svg"  alt="">
+                        <img id="menucap1" class="w-100 m-0 p-0" src="assets/menuCap.svg"  alt="">
+                    </div>
+                </div>
+                <div class="col-3 m-0">
+                    <div class="w-100 m-0 p-0" style="height: 17px;">
+                        <img id="menucap2" class="w-100 m-0 p-0" src="assets/menuCap.svg"  alt="">
+                    </div>
+                </div>
+                <div class="col-3 m-0">
+                    <div class="w-100 m-0 p-0" style="height: 17px;">
+                        <img id="menucap3" class="w-100 m-0 p-0" src="assets/menuCap.svg"  alt="">
+                    </div>
+                </div>
+                <div class="col-3 m-0">
+                    <div class="w-100 m-0 p-0" style="height: 17px;">
+                        <img id="menucap4" class="w-100 m-0 p-0" src="assets/menuCap.svg"  alt="">
                     </div>
                 </div>
             </div>
@@ -206,22 +259,34 @@
             <div class="row ">
                 <div class="col-3 ">
                     <div class="text-center" style="">
-                        <img src="assets/homeActive.svg" style="height: 56px;" alt="">
+                        <a type="button" onclick="homeClick()">
+                            
+                            <img id="homeBtn" src="assets/homeActive.svg" style="height: 56px;" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="col-3 ">
                     <div class="text-center" style="">
-                        <img src="assets/advisory.svg" style="height: 56px;" alt="">
+                        <a type="button" onclick="advisoryClick()">
+
+                            <img id="advisoryBtn" src="assets/advisory.svg" style="height: 56px;" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="col-3 ">
                     <div class="text-center" style="">
-                        <img src="assets/meal.svg" style="height: 56px;" alt="">
+                        <a type="button" onclick="mealClick()">
+
+                            <img id="mealBtn" src="assets/meal.svg" style="height: 56px;" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="col-3 ">
                     <div class="text-center" style="">
-                        <img src="assets/progress.svg" style="height: 56px;" alt="">
+                        <a type="button" onclick="progressClick()">
+
+                            <img id="progressBtn" src="assets/progress.svg" style="height: 56px;" alt="">
+                        </a>
                     </div>
                 </div>
                 
@@ -232,4 +297,124 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function homeClick() {
+        var homeBtn=document.getElementById('homeBtn');
+        var advisoryBtn=document.getElementById('advisoryBtn');
+        var mealBtn=document.getElementById('mealBtn');
+        var progressBtn=document.getElementById('progressBtn');
+        var menucap1=document.getElementById('menucap1');
+        var menucap2=document.getElementById('menucap2');
+        var menucap3=document.getElementById('menucap3');
+        var menucap4=document.getElementById('menucap4');
+        var slide1=document.getElementById('slide1');
+        var slide2=document.getElementById('slide2');
+        var slide3=document.getElementById('slide3');
+        var slide4=document.getElementById('slide4');
+        
+
+        homeBtn.src="assets/homeActive.svg";
+        advisoryBtn.src="assets/advisory.svg";
+        mealBtn.src="assets/meal.svg";
+        progressBtn.src="assets/progress.svg";
+
+
+        menucap1.style.display="inline";
+        menucap2.style.display="none";
+        menucap3.style.display="none";
+        menucap4.style.display="none";
+        slide1.style.display="block";
+        slide2.style.display="none";
+        slide3.style.display="none";
+        slide4.style.display="none";
+        
+    }
+    function advisoryClick() {
+         var homeBtn=document.getElementById('homeBtn');
+        var advisoryBtn=document.getElementById('advisoryBtn');
+        var mealBtn=document.getElementById('mealBtn');
+        var progressBtn=document.getElementById('progressBtn');
+        var menucap1=document.getElementById('menucap1');
+        var menucap2=document.getElementById('menucap2');
+        var menucap3=document.getElementById('menucap3');
+        var menucap4=document.getElementById('menucap4');
+        var slide1=document.getElementById('slide1');
+        var slide2=document.getElementById('slide2');
+        var slide3=document.getElementById('slide3');
+        var slide4=document.getElementById('slide4');
+
+        homeBtn.src="assets/home.svg";
+        advisoryBtn.src="assets/advisoryActive.svg";
+        mealBtn.src="assets/meal.svg";
+        progressBtn.src="assets/progress.svg";
+
+        menucap1.style.display="none";
+        menucap2.style.display="inline";
+        menucap3.style.display="none";
+        menucap4.style.display="none";
+        slide1.style.display="none";
+        slide2.style.display="block";
+        slide3.style.display="none";
+        slide4.style.display="none";
+        
+    }
+    function mealClick() {
+         var homeBtn=document.getElementById('homeBtn');
+        var advisoryBtn=document.getElementById('advisoryBtn');
+        var mealBtn=document.getElementById('mealBtn');
+        var progressBtn=document.getElementById('progressBtn');
+        var menucap1=document.getElementById('menucap1');
+        var menucap2=document.getElementById('menucap2');
+        var menucap3=document.getElementById('menucap3');
+        var menucap4=document.getElementById('menucap4');
+        var slide1=document.getElementById('slide1');
+        var slide2=document.getElementById('slide2');
+        var slide3=document.getElementById('slide3');
+        var slide4=document.getElementById('slide4');
+
+        homeBtn.src="assets/home.svg";
+        advisoryBtn.src="assets/advisory.svg";
+        mealBtn.src="assets/mealActive.svg";
+        progressBtn.src="assets/progress.svg";
+
+        menucap1.style.display="none";
+        menucap2.style.display="none";
+        menucap3.style.display="inline";
+        menucap4.style.display="none";
+        slide1.style.display="none";
+        slide2.style.display="none";
+        slide3.style.display="block";
+        slide4.style.display="none";
+        
+    }
+    function progressClick() {
+         var homeBtn=document.getElementById('homeBtn');
+        var advisoryBtn=document.getElementById('advisoryBtn');
+        var mealBtn=document.getElementById('mealBtn');
+        var progressBtn=document.getElementById('progressBtn');
+        var menucap1=document.getElementById('menucap1');
+        var menucap2=document.getElementById('menucap2');
+        var menucap3=document.getElementById('menucap3');
+        var menucap4=document.getElementById('menucap4');
+        var slide1=document.getElementById('slide1');
+        var slide2=document.getElementById('slide2');
+        var slide3=document.getElementById('slide3');
+        var slide4=document.getElementById('slide4');
+
+        homeBtn.src="assets/home.svg";
+        advisoryBtn.src="assets/advisory.svg";
+        mealBtn.src="assets/meal.svg";
+        progressBtn.src="assets/progressActive.svg";
+
+        menucap1.style.display="none";
+        menucap2.style.display="none";
+        menucap3.style.display="none";
+        menucap4.style.display="inline";
+        slide1.style.display="none";
+        slide2.style.display="none";
+        slide3.style.display="none";
+        slide4.style.display="block";
+        
+    }
+</script>
 </html>
